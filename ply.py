@@ -1,6 +1,7 @@
 import click
 
 from commands import initcd
+from commands import playcd
 
 
 @click.group(invoke_without_command=True)
@@ -15,3 +16,11 @@ def cli(ctx):
 @cli.command()
 def init():
     initcd.run()
+
+
+@cli.command()
+@click.option('-s')
+def play(s):
+    playcd.run(song=s)
+
+
