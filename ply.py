@@ -21,6 +21,7 @@ def init():
 @cli.command()
 @click.option('-s')
 def play(s):
-    playcd.run(song=s)
-
-
+    if s == "":
+        click.echo("Invalid song")
+    else:
+        playcd.run(song=s)
