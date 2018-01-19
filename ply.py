@@ -2,6 +2,7 @@ import click
 
 from commands import initcd
 from commands import playcd
+from commands import pausecd
 
 
 @click.group(invoke_without_command=True)
@@ -14,6 +15,11 @@ def cli(ctx):
 @cli.command()
 def init():
     initcd.run()
+
+
+@cli.command()
+def pause():
+    pausecd.run()
 
 
 @cli.command()

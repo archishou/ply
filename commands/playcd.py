@@ -4,9 +4,7 @@ import pygame
 
 
 def run(song):
-    click.echo(application.getMusicFolder())
     click.echo("Playing: " + song)
-    click.echo(application.getMusicFolder() + "/" + song + ".wav")
     playSong(application.getMusicFolder() + "/" + song + ".wav")
 
 
