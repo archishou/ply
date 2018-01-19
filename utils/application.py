@@ -1,5 +1,11 @@
+from os.path import expanduser
 
 
 def getApplicationFolder():
-    hello = ""
-    return hello
+    return expanduser("~") + "/ply/config"
+
+
+def getMusicFolder():
+    file = open(getApplicationFolder() + "/path.txt", "r")
+    return file.read()
+

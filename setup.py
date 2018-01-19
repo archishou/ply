@@ -5,7 +5,7 @@ setup(
     version='0.1',
     py_modules=['ply'],
     install_requires=[
-        'Click',
+        'Click', 'pygame',
     ],
     entry_points='''
         [console_scripts]
