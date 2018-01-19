@@ -1,7 +1,7 @@
 import click
-import pygame
+
+from utils import Player
 
 
 def run():
-    pygame.mixer.init()
-    pygame.mixer.pause()
+    Player.getGame().mixer.pause()

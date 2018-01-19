@@ -1,5 +1,6 @@
 import click
 from utils import application
+from utils import Player
 import pygame
 
 
@@ -9,8 +10,7 @@ def run(song):
 
 
 def playSong(song):
-    pygame.init()
-    pygame.mixer.music.load(song)
-    pygame.mixer.music.play()
+    Player.getGame().mixer.music.load(song)
+    Player.getGame().mixer.music.play()
     while pygame.mixer.music.get_busy():
         pygame.time.Clock().tick(10)

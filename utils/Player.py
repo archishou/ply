@@ -1,12 +1,12 @@
 import pygame
 
 
-class Player:
+game = pygame
 
-    game = pygame
 
-    def __init__(self):
-        Player.game.mixer.init()
+def __init__():
+    game.mixer.init()
 
-    def getGame(self):
-        return Player.game
+
+def getGame():
+    return game
